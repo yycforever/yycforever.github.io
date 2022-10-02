@@ -1,89 +1,124 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Page Not Found</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      text-align: center;
-    }
-    .box {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
-    .number {
-      font-size: 80px;
-      color: #666;
-      font-weight: bold;
-    }
-    .text {
-      font-size: 14px;
-      margin: 24px;
-      color: #333;
-    }
-    .btn-container {
-      display: flex;
-      justify-content: center;
-    }
-    .btn {
-      padding: 8px 24px;
-      display: inline-block;
-      text-decoration: none;
-      background: #fff;
-      border: 2px solid #efefef;
-      color: #333;
-      margin: 24px;
-      border-radius: 20px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-    }
-    .footer {
-      padding: 16px;
-      border-top: 1px solid #efefef;
-      color: #777;
-      font-weight: lighter;
-    }
-    .footer a {
-      text-decoration: none;
-      font-weight: bold;
-      color: #000;
-    }
-  </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Page Not Found</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		@keyframes move1 {
+			from{top: 0px;}
+			to{top: 20%;}
+		}
+		@keyframes move2 {
+			from{top: 100%;}
+			to{top: 95%;}
+		}
+		body {
+			background-image: url("https://th.bing.com/th/id/R.8bd6ea8aa923f79426f98942246013d1?rik=z3kYppPfT80M3w&pid=ImgRaw&r=0");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			float: left;
+            width: 100%;
+
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+			text-align: center;
+		}
+		.box {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+
+			animation: move1 2s;
+			position: absolute;
+			background-color: rgb(255,255,255,0.6);
+			border-radius: 20px;
+			top: 20%;
+			left: 25%;
+			width: 50%;
+			height: 50%;
+			padding: 1%;
+			margin: 0px 0 0 0px;
+		}
+		.number {
+			font-size: 80px;
+			color: #666;
+			font-weight: bold;
+		}
+		.btn-container {
+			display: flex;
+			justify-content: center;
+		}
+		.btn {
+			padding: 8px 24px;
+			display: inline-block;
+			text-decoration: none;
+			background: #fff;
+			border: 2px solid #efefef;
+			color: #333;
+			margin: 24px;
+			border-radius: 20px;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+
+			transition: all 0.6s ease;
+			-webkit-transition: all 0.6s ease;
+		}
+		.btn:hover{
+			box-shadow: 4px 4px 4px rgba(75, 75, 75, 0.7);
+			transition: all 0.6s ease;
+			-webkit-transition: all 0.6s ease;
+		}
+		.footer {
+			animation: move2 2s;
+			background-color: rgb(255,255,255,0.6);
+			position: absolute;
+			height: 4%;
+			width: 100%;
+			top: 95%;
+			left: 0%;
+			padding-top: 0.5%;
+			/* border-top: 1px solid #efefef; */
+			color: rgb(75, 75, 75);
+			font-weight: lighter;
+		}
+		.footer a {
+			text-decoration: none;
+			font-weight: bold;
+			color: #000;
+		}
+	</style>
 </head>
 <body>
-  <div class="box">
-    <div class="number">4 0 4</div>
-    <div class="text">
-      Page not found
-    </div>
-    <div class="btn-container">
-      <a class="btn" id="back">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="margin-right: 8px;">
-          <path fill="none" d="M0 0h24v24H0z"/>
-          <path d="M5.828 7l2.536 2.536L6.95 10.95 2 6l4.95-4.95 1.414 1.414L5.828 5H13a8 8 0 1 1 0 16H4v-2h9a6 6 0 1 0 0-12H5.828z"/>
-        </svg>
-        Back
-      </a>
-    </div>
-  </div>
-  <footer class="footer">
-    Powered by <a href="https://gridea.dev" target="_blank">Gridea</a>
-  </footer>
-  <script>
-    var back = document.getElementById('back')
-    back.onclick = function() { console.log('run...'); history.back() }
-  </script>
+	<div class="box">
+		<h1>It seems that you get into a wrong place ❣</h1>
+		<div class="number"> =4 0 4= </div>
+		<div class="btn-container">
+			<a class="btn" id="back">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="margin-right: 8px;">
+					<path fill="none" d="M0 0h24v24H0z"/>
+					<path d="M5.828 7l2.536 2.536L6.95 10.95 2 6l4.95-4.95 1.414 1.414L5.828 5H13a8 8 0 1 1 0 16H4v-2h9a6 6 0 1 0 0-12H5.828z"/>
+				</svg>
+				Back
+			</a>
+		</div>
+	</div>
+	<footer class="footer">
+		<p>Love you ❣</p>
+	</footer>
+	<script>
+		var back = document.getElementById('back')
+		back.onclick = function() { console.log('run...'); history.back() }
+	</script>
 </body>
 </html>
