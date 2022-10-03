@@ -12,12 +12,12 @@
 			padding: 0;
 		}
 		@keyframes move1 {
-			from{top: 0px;}
+			from{top: -50%;}
 			to{top: 20%;}
 		}
 		@keyframes move2 {
-			from{height: 0;top: 100%;}
-			to{height: 4%;top: 95%;}
+			from{top: 200%;}
+			to{top: 95%;}
 		}	
 		body {
 			background-image: url("https://th.bing.com/th/id/R.8bd6ea8aa923f79426f98942246013d1?rik=z3kYppPfT80M3w&pid=ImgRaw&r=0");
@@ -39,6 +39,7 @@
 			flex-direction: column;
 
 			animation: move1 2.5s;
+			overflow: hidden;
 			position: absolute;
 			background-color: rgb(255,255,255,0.6);
 			border-radius: 20px;
@@ -80,9 +81,11 @@
 			-webkit-transition: all 0.6s ease;
 		}
 		.footer {
+			overflow: hidden;
 			animation: move2 2.5s;
+
 			background-color: rgb(255,255,255,0.6);
-			position: absolute;
+			position: fixed;
 			height: 4%;
 			width: 100%;
 			top: 95%;
@@ -92,6 +95,7 @@
 			font-weight: lighter;
 		}
 		.footer a {
+			overflow: hidden;
 			text-decoration: none;
 			font-weight: bold;
 			color: #000;
