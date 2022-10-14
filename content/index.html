@@ -1,4 +1,114 @@
 <!DOCTYPE html>
 <html>
-    <p>yes</p>
+<meta charset="utf-8"> 
+<head>
+	<link rel="shortcut icon" href="/yyc48x48.ico">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		@keyframes move_yxr{
+			0%{left: calc(99% - 100px);}
+			100%{left:calc(50% + 50px);}
+		}
+		@keyframes move_yyc{
+			0%{left: 0%;}
+			100%{left:calc(50% - 50px);}
+		}
+		@keyframes spin_yyc{
+			from{transform:rotate(-5turn);}
+		}
+		@keyframes spin_yxr{
+			from{transform:rotate(5turn);}
+		}
+		@keyframes heart_color{
+			from{opacity: 0;}
+			to{opacity: 1;}
+		}
+		@keyframes heart_move{
+			from{top: inherit;transform: scale(1);}
+			to{top: 50%;transform: scale(2);}
+		}
+		body{
+			background-color: rgb(255,255,255,1);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			float: left;
+            width: 100%;
+
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+			text-align: center;
+		}
+		.yycph{
+			background-image: url(yyc.jpg);
+			height: 100px;width: 100px;
+			border-radius: 100%;
+			position: absolute;
+			left:calc(50% - 50px);top: calc(90% - 100px);
+			overflow: hidden;
+			animation: spin_yyc 4s,move_yyc 4s;
+			transition: all ease;
+		}
+		.myph{
+			background-image: url(myph.jpg);
+			height: 100px;width: 100px;
+			border-radius: 100%;
+			position: absolute;
+			left:calc(50% + 50px);top: calc(90% - 100px);
+			overflow: hidden;
+			animation: spin_yxr 4s,move_yxr 4s;
+			transition: all ease;
+		}
+		.heart_circle1{
+			background-color: rgb(231, 193, 243);
+			position: absolute;
+			width: 80px;height: 80px;
+			top: 75%;left: calc(50% - 70px);
+			border-radius: 100%;
+		}
+		.heart_circle2{
+			background-color: rgb(231, 193, 243);
+			position: absolute;
+			width: 80px;height: 80px;
+			top: calc(75% - 40px);left: calc(50% - 30px);
+			border-radius: 100%;
+		}
+		.heart_square{
+			background-color: rgb(231, 193, 243);
+			position: absolute;
+			width: 80px;height: 80px;
+			top: calc(75%);left: calc(50% - 30px);
+		}
+		.heart{
+			/* -ms-transform-origin-x: 50%; */
+			/* -ms-transform-origin-y: 75%; */
+			transform: rotate(45deg);
+			position: absolute;
+			top: 75%;left: calc(50% + 70px);
+			opacity: 0;
+			animation: heart_color;
+			animation-duration: 2s;
+			animation-delay: 4s;
+			animation-fill-mode: forwards;
+			/* animation: heart_move;
+			animation-duration: 4s;
+			animation-delay: 6s;*/
+		}
+	</style>
+</head>
+  
+<body>
+	<div class="yycph"></div>
+	<div class="myph"></div>
+	<div class="heart">
+		<div class="heart_circle1"></div>
+		<div class="heart_circle2"></div>
+		<div class="heart_square"></div>
+	</div>
+</body>
+
 </html>
