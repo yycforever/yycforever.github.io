@@ -27,8 +27,8 @@
 			to{opacity: 1;}
 		}
 		@keyframes heart_move{
-			from{top: inherit;transform: scale(1);}
-			to{top: 50%;transform: scale(2);}
+			from{top: inherit;}
+			to{top: 50%;}
 		}
 		body{
 			background-color: rgb(255,255,255,1);
@@ -94,9 +94,27 @@
 			animation-duration: 2s;
 			animation-delay: 4s;
 			animation-fill-mode: forwards;
-			/* animation: heart_move;
-			animation-duration: 4s;
-			animation-delay: 6s;*/
+		}
+		.yycfdu{
+			position: absolute;
+			height: 240px;width: 600px;
+			padding-left: calc(50% - 240px);
+			left: 0%;top: 40%;
+			background-image: url(yycfdu.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		.yxrthu{
+			height: 240px;width: 600px;
+			margin-right: 0%;
+			padding-right: calc(50% - 240px);
+			position: absolute;
+			right: 0%;top: calc(40% - 240px);
+			background-image: url(yxrthu.png);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
 		}
 	</style>
 </head>
@@ -109,6 +127,8 @@
 		<div class="heart_circle2"></div>
 		<div class="heart_square"></div>
 	</div>
+	<div class="yycfdu"></div>
+	<div class="yxrthu"></div>
 </body>
 
 </html>
