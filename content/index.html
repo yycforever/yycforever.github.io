@@ -26,9 +26,13 @@
 			from{opacity: 0;}
 			to{opacity: 1;}
 		}
-		@keyframes heart_move{
-			from{top: inherit;}
-			to{top: 50%;}
+		@keyframes yycfdu_move{
+			from{left: 100%;opacity: 1;}
+			to{left:0%;opacity: 1;}
+		}
+		@keyframes yxrthu_move{
+			from{right:100%;opacity: 1;}
+			to{right:0%;opacity: 1;}
 		}
 		body{
 			background-color: rgb(255,255,255,1);
@@ -87,8 +91,9 @@
 			/* -ms-transform-origin-x: 50%; */
 			/* -ms-transform-origin-y: 75%; */
 			transform: rotate(45deg);
+			z-index: 114514;
 			position: absolute;
-			top: 75%;left: calc(50% + 70px);
+			top: calc(90% - 120px);left: calc(50% + 70px);
 			opacity: 0;
 			animation: heart_color;
 			animation-duration: 2s;
@@ -97,16 +102,24 @@
 		}
 		.yycfdu{
 			position: absolute;
+			opacity: 0;
 			height: 230px;width: 590px;
 			padding-left: calc(50% - 240px);
-			left: 0%;top: 40%;
+			left: 0%;top: calc(40% - 10px);
 			background-image: url(yycfdu.png);
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
+
+			overflow: hidden!important;
+			animation: yycfdu_move;
+			animation-duration: 2s;
+			animation-delay: 4s;
+			animation-fill-mode: forwards;
 		}
 		.yxrthu{
 			height: 230px;width: 590px;
+			opacity: 0;
 			margin-right: 0%;
 			padding-right: calc(50% - 240px);
 			position: absolute;
@@ -115,11 +128,22 @@
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
+			
+			overflow: hidden!important;
+			animation: yxrthu_move;
+			animation-duration: 2s;
+			animation-delay: 4s;
+			animation-fill-mode: forwards;
+		}
+		.music{
+			z-index: 114514;
 		}
 	</style>
 </head>
   
 <body>
+	<!-- <embed class="music" src="//music.163.com/outchain/player?type=2&id=33035577&auto=1&height=66"></embed> -->
+	<embed class="music" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=7756889838&auto=1&height=90"></embed>
 	<div class="yycph"></div>
 	<div class="myph"></div>
 	<div class="heart">
