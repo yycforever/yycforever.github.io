@@ -91,9 +91,9 @@
 			/* -ms-transform-origin-x: 50%; */
 			/* -ms-transform-origin-y: 75%; */
 			transform: rotate(45deg);
-			z-index: 114514;
+			z-index: 10;
 			position: absolute;
-			top: calc(90% - 120px);left: calc(50% + 70px);
+			top: calc(73%);left: calc(50% + 70px);
 			opacity: 0;
 			animation: heart_color;
 			animation-duration: 2s;
@@ -103,9 +103,9 @@
 		.yycfdu{
 			position: absolute;
 			opacity: 0;
-			height: 230px;width: 590px;
-			padding-left: calc(50% - 240px);
-			left: 0%;top: calc(40% - 10px);
+			height: 250px;width: 600px;
+			padding-left: calc(50% - 250px);
+			left: 0%;top: calc(40%);
 			background-image: url(yycfdu.png);
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -118,12 +118,12 @@
 			animation-fill-mode: forwards;
 		}
 		.yxrthu{
-			height: 230px;width: 590px;
+			height: 250px;width: 600px;
 			opacity: 0;
 			margin-right: 0%;
-			padding-right: calc(50% - 240px);
+			padding-right: calc(50% - 250px);
 			position: absolute;
-			right: 0%;top: calc(40% - 240px);
+			right: 0%;top: calc(40% - 250px);
 			background-image: url(yxrthu.png);
 			background-size: cover;
 			background-position: center;
@@ -138,21 +138,73 @@
 		.music{
 			z-index: 114514;
 		}
+		.attention{
+			/* overflow-y: scroll; */
+			position: fixed;z-index: 120;
+			right: -450px;bottom: 10px;
+			height: 35	0px;width: 430px;
+			background-color: rgb(18, 76, 202,0.7);
+			border-radius: 20px;
+			color: white;
+			padding: 20px;
+			animation-name: hide;
+			animation-duration: 1.5s;
+			animation-fill-mode:forwards!important;
+			animation-name: apear;
+			animation-duration: 1.5s;
+			animation-fill-mode:forwards!important;
+		}
 	</style>
 </head>
   
 <body>
 	<!-- <embed class="music" src="//music.163.com/outchain/player?type=2&id=33035577&auto=1&height=66"></embed> -->
-	<embed class="music" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=7756889838&auto=1&height=90"></embed>
+	<!-- <embed class="music" frameborder="no" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=7756889838&auto=1&height=90"></embed> -->
+	<iframe frameborder="no" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=7756889838&auto=1&height=430"></iframe>
 	<div class="yycph"></div>
 	<div class="myph"></div>
-	<div class="heart">
+	<div class="heart" onclick="cont()">
 		<div class="heart_circle1"></div>
 		<div class="heart_circle2"></div>
 		<div class="heart_square"></div>
 	</div>
 	<div class="yycfdu"></div>
 	<div class="yxrthu"></div>
+	<div class="attention" id="fi-1" onmouseout="disapear()" onmouseover="apear()">
+		<h1>-Attention-</h3>
+		<br></br>
+		<li><b>Please turn down the music before you turn it on.</b></li>
+		<br></br>
+		<li><b>Find a special element and click it to skip to the next page.</b></li>
+		<br></br>
+		<li><b>Move your mouse away,and this attention will hide.</b></li>
+		<br></br>
+		<li>图片有点糊，这句话有点突兀，请谅解。</li>
+	</div>
 </body>
-
+<script>
+	function cont(){location.assign("https://yycforever.github.io/naoche/");}
+	function apear(){
+		var a=document.getElementById("fi-1");
+		document.styleSheets[0].insertRule(
+			`@keyframes apear{
+				from{right:-450px;}
+				to{right:10px;}
+			}`,
+			0
+		)
+		a.style.animation="apear 1.5s";
+	}
+	function disapear(){
+		var a=document.getElementById("fi-1");
+		document.styleSheets[0].insertRule(
+			`@keyframes hide{
+				from{right:10px;}
+				to{right:-450px;}
+			}`,
+			0
+		);
+		a.style.animation="hide 1.5s";
+	}
+</script>
 </html>
