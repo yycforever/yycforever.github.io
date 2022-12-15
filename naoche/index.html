@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8"> 
+<head>
+	<link rel="shortcut icon" href="/yyc48x48.ico">
+	<style>
+		body{
+			z-index: -1;
+			/* background-color: blue; */
+			background-image: url("https://user-images.githubusercontent.com/95968907/207225945-9d619391-dd30-44bd-89ef-8c30c50aa2be.gif");
+			background-repeat: repeat;
+		}
+		.s1{
+			position: absolute;
+			background-color: white;opacity: 1;
+			height: 112px;width: 112px;
+			top: 224px;left: 896px;text-align: center;
+		}
+		.s2{
+			position: absolute;
+			background-color: white;opacity: 0;
+			height: 112px;width: 112px;
+			top: 112px;left: 784px;text-align: center;
+		}
+		.s3{
+			position: absolute;
+			background-color: white;opacity: 0;
+			height: 112px;width: 112px;
+			top: 112px;left: 672px;text-align: center;
+		}
+		.s4{
+			position: absolute;
+			background-color: white;opacity: 0;
+			height: 112px;width: 112px;
+			top: 224px;left: 560px;text-align: center;
+		}
+		.s5{
+			position: absolute;
+			background-color: white;opacity: 0;
+			height: 112px;width: 112px;
+			top: 336px;left: 560px;text-align: center;
+		}
+		.s6{
+			position: absolute;
+			background-color: white;opacity: 0;
+			height: 112px;width: 112px;
+			top: 448px;left: 672px;text-align: center;
+		}
+		.s7{
+			position: absolute;
+			background-color: white;opacity: 0;
+			height: 112px;width: 112px;
+			top: 560px;left: 784px;text-align: center;
+		}
+		.s8{
+			position: absolute;
+			background-color: white;opacity: 0;
+			height: 112px;width: 112px;
+			top: 672px;left: 896px;text-align: center;
+		}
+		.s9{
+			position: absolute;
+			background-color: white;opacity: 0;
+			height: 112px;width: 112px;
+			top: 560px;left: 1008px;text-align: center;
+		}
+		.s10{
+			position: absolute;
+			background-color: white;opacity: 0;
+			height: 112px;width: 112px;
+			top: 448px;left: 1120px;text-align: center;
+		}
+		.s11{
+			position: absolute;
+			background-color: white;opacity: 0;
+			height: 112px;width: 112px;
+			top: 336px;left: 1236px;text-align: center;
+		}
+		.s12{
+			position: absolute;
+			background-color: white;opacity: 0;
+			height: 112px;width: 112px;
+			top: 224px;left: 1236px;text-align: center;
+		}
+		.s13{
+			position: absolute;
+			background-color: white;opacity: 0;
+			height: 112px;width: 112px;
+			top: 112px;left: 1120px;text-align: center;
+		}
+		.s14{
+			position: absolute;
+			background-color: white;opacity: 0;
+			height: 112px;width: 112px;
+			top: 112px;left: 1008px;text-align: center;
+		}
+		.finish{
+			background-color: rgba(255, 255, 255);
+			width: 570px;height: 320px;
+			position: absolute;
+			left: calc(50% - 285px);top: -600px;
+			/* top: calc(50% - 230px)!important; */
+			padding: 30px;
+			border-radius: 30px;border: rgba(83, 83, 83, 0.8) solid 5px;
+			box-shadow: 16px 16px 16px rgba(0,0,0,0.8);
+			text-align: center;
+
+			animation-name: move;
+			animation-duration: 1.5s;
+			animation-fill-mode:forwards!important;
+		}
+		.attention{
+			/* overflow-y: scroll; */
+			position: fixed;z-index: 120;
+			right: -450px;bottom: 10px;
+			height: 35	0px;width: 430px;
+			background-color: rgb(18, 76, 202,0.7);
+			border-radius: 20px;
+			color: white;
+			padding: 20px;
+			animation-name: hide;
+			animation-duration: 1.5s;
+			animation-fill-mode:forwards!important;
+			animation-name: apear;
+			animation-duration: 1.5s;
+			animation-fill-mode:forwards!important;
+		}
+		a:link{color: #2a3ed1;}
+	</style>
+</head>
+  
+<body onload="attention()">
+	<div class="s1" id="s1" onmouseover="update('s1')" onmouseout="hide('s1')">
+		<br><b>↑ then ←</b> <br>
+		<button id="b1" onclick="change('s1')">Click to start</button>
+	</div>
+	<div class="s2" id="s2" onmouseover="update('s2')" onmouseout="hide('s2')">
+		<br>	<b>←</b> <br>
+		<button onclick="change('s2')">Click to continue</button>
+	</div>
+	<div class="s3" id="s3" onmouseover="update('s3')" onmouseout="hide('s3')">
+		<br>	<b>↓ then ←</b> <br>
+		<button onclick="change('s3')">Click to continue</button>
+	</div>
+	<div class="s4" id="s4" onmouseover="update('s4')" onmouseout="hide('s4')">
+		<br>	<b>↓</b> <br>
+		<button onclick="change('s4')">Click to continue</button>
+	</div>
+	<div class="s5" id="s5" onmouseover="update('s5')" onmouseout="hide('s5')">
+		<br>	<b>↓ then →</b> <br>
+		<button onclick="change('s5')">Click to continue</button>
+	</div>
+	<div class="s6" id="s6" onmouseover="update('s6')" onmouseout="hide('s6')">
+		<br>	<b>↓ then →</b> <br>
+		<button onclick="change('s6')">Click to continue</button>
+	</div>
+	<div class="s7" id="s7" onmouseover="update('s7')" onmouseout="hide('s7')">
+		<br>	<b>↓ then →</b> <br>
+		<button onclick="change('s7')">Click to continue</button>
+	</div>
+	<div class="s8" id="s8" onmouseover="update('s8')" onmouseout="hide('s8')">
+		<br>	<b>↑ then →</b> <br>
+		<button onclick="change('s8')">Click to continue</button>
+	</div>
+	<div class="s9" id="s9" onmouseover="update('s9')" onmouseout="hide('s9')">
+		<br>	<b>↑ then →</b> <br>
+		<button onclick="change('s9')">Click to continue</button>
+	</div>
+	<div class="s10" id="s10" onmouseover="update('s10')" onmouseout="hide('s10')">
+		<br>	<b>↑ then →</b> <br>
+		<button onclick="change('s10')">Click to continue</button>
+	</div>
+	<div class="s11" id="s11" onmouseover="update('s11')" onmouseout="hide('s11')">
+		<br>	<b>↑</b> <br>
+		<button onclick="change('s11')">Click to continue</button>
+	</div>
+	<div class="s12" id="s12" onmouseover="update('s12')" onmouseout="hide('s12')">
+		<br>	<b>↑ then ←</b> <br>
+		<button onclick="change('s12')">Click to continue</button>
+	</div>
+	<div class="s13" id="s13" onmouseover="update('s13')" onmouseout="hide('s13')">
+		<br>	<b>←</b> <br>
+		<button onclick="change('s13')">Click to continue</button>
+	</div>
+	<div class="s14" id="s14" onmouseover="update('s14')" onmouseout="hide('s14')">
+		<br>	<b>↓ then ←</b> <br>
+		<button onclick="change('s14')">Click to continue</button>
+	</div>
+
+	<div class="attention" id="fi-1" onmouseout="disapear()" onmouseover="apear()">
+		<h1 align="center">-Attention-</h1>
+		<br>
+		<li><b>如果不想继续可以<a href="https://yycforever.github.io/timeshaft/">这里<a>跳过。</b></li>
+		<br>
+		<li><b>沿着箭头点击。</b></li>
+		<br>
+		<li>背景有点魔怔，密集，请谅解。</li>
+	</div>
+	<div class="finish" id="finish">
+		<h2>为我的魔怔道歉。</h2> <br>
+		<h2>后面没这么恐怖了。</h2> <br>
+		<h1><a href="https://yycforever.github.io/timeshaft/">Continue -></h1>
+	</div>
+</body>
+<script>
+	var t=1,q=new Array();
+	for(var i=1;i<=14;++i)q[i]="s"+i;//,console.log(q[i]);
+	
+	function hide(tmp){
+		if(tmp=='s1' || tmp!=q[t])return;
+		var a=document.getElementById(tmp);
+		a.style.opacity=0;
+	}
+	function update(tmp){
+		// console.log(tmp+'\n'+t)
+		if(tmp!=q[t])return;
+		var a=document.getElementById(tmp);
+		a.style.opacity="1";
+	}
+	function change(tmp){
+		if(t>14 && tmp=="s1"){
+			console.log(11111);
+			var a=document.getElementById(finish);
+			document.styleSheets[0].insertRule(
+				`@keyframes move{
+					from{top: -600px;}
+					to{top: calc(50% - 230px);}
+				}`,
+				0
+			)
+			a.style.animation="move 1.5s"
+			return;
+		}
+		if(tmp!=q[t])return;
+		var a=document.getElementById(tmp);
+		a.style.opacity="1";++t;
+		if(t==15){
+			var a=document.getElementById('b1');
+			a.innerHTML="Finish!";
+		}
+	}
+	function apear(){
+		var a=document.getElementById("fi-1");
+		document.styleSheets[0].insertRule(
+			`@keyframes apear{
+				from{right:-450px;}
+				to{right:10px;}
+			}`,
+			0
+		)
+		a.style.animation="apear 1.5s";
+	}
+	function disapear(){
+		var a=document.getElementById("fi-1");
+		document.styleSheets[0].insertRule(
+			`@keyframes hide{
+				from{right:10px;}
+				to{right:-450px;}
+			}`,
+			0
+		);
+		a.style.animation="hide 1.5s";
+	}
+	function attention(){
+		var tmp=prompt("做好准备，这页有点魔性，和密集，如果难受或不适可以跳过此页面。\\ww\n\n 0 跳过， 1 继续。\n");
+		if(tmp==0)location.assign("https://yycforever.github.io/timeshaft/");
+	}
+</script>
+</html>
