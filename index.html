@@ -30,6 +30,7 @@
 			100%{top:89%;}
 		}
 		body{
+			user-select: none;
 			background-image: url("https://th.bing.com/th/id/R.8bd6ea8aa923f79426f98942246013d1?rik=z3kYppPfT80M3w&pid=ImgRaw&r=0");
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -95,7 +96,7 @@
 	</style>
 </head>
   
-<body onload="typekey()">
+<body>
 	<div class="box">
 		<p class="words ch1">My Dear yyc</p>
 		<p class="words ch2"> Happy Birthday !</p>
@@ -103,10 +104,12 @@
 	<a href="https://yycforever.github.io/content" class="pulldown"></a>
 </body>
 <script>
-	function typekey(){
-		var key=prompt("Please enter the password.");
-		const ans="yyc should drink more milk.";
-		if(key!=ans)location.replace("https://yycforever.github.io/404");
-	}
+	(()=>{
+		// function typekey(){
+			var key=prompt("Please enter the password.");
+			const ans="yyc should drink more milk.";
+			if(key!=ans)location.replace("https://yycforever.github.io/404");
+		// }
+	})();
 </script>
 </html>
