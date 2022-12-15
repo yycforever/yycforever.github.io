@@ -95,12 +95,18 @@
 	</style>
 </head>
   
-<body>
+<body onload="typekey()">
 	<div class="box">
 		<p class="words ch1">My Dear yyc</p>
 		<p class="words ch2"> Happy Birthday !</p>
 	</div>
 	<a href="https://yycforever.github.io/content" class="pulldown"></a>
 </body>
-
+<script>
+	function typekey(){
+		var key=prompt("Please enter the password.");
+		if(key!="yyc应该多喝牛奶")location.replace("https://yycforever.github.io/404");
+		return;
+	}
+</script>
 </html>
