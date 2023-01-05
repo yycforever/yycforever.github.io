@@ -5,6 +5,7 @@
 	<link rel="shortcut icon" href="/yyc48x48.ico">
 	<style>
 		*{margin: 0;padding: 0;}
+		body{user-select: none;}
 		html,body{
 			height: 100%;
 			overflow: hidden;
@@ -39,6 +40,8 @@
 		<li><b>This is the last one.</b></li>
 		<br>
 		<li><b>尽量寒假给你gift。</b></li>
+		<br>
+		<li><b>至于为什么要中英结合...我也不知道...</b></li>
 	</div>
 </body>
 <script>
@@ -65,5 +68,11 @@
 		);
 		a.style.animation="hide 1.5s";
 	}
+	(()=>{
+		var key=prompt("Please enter the password,you can find from the last attention.\n If you don't know pls type 'Back' to get back to get the key.");
+		const ans="But yyc love zhenguoli.";
+		if(key!=ans && key!="Back")location.replace("https://yycforever.github.io/404");
+		if(key=="Back")location.replace("https://yycforever.github.io/naoche");
+	})();
 </script>
 </html>
